@@ -6,7 +6,15 @@ public class DictionaryExec_Chapter21 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		HashMap<String,String> dictionary = new HashMap<String,String>();
+		lookup("apple");
+		lookup("banana");
+		lookup("grape");
+		lookup("orange");
+		
+	}
+
+	private static void lookup(String text) {
+HashMap<String,String> dictionary = new HashMap<String,String>();
 		
 		dictionary.put("apple","りんご");
 		dictionary.put("peach","桃");
@@ -20,10 +28,13 @@ public class DictionaryExec_Chapter21 {
 		dictionary.put("cherry","さくらんぼ");
 		
 		
-		System.out.println(dictionary.get("apple"));
-		System.out.println(dictionary.get("banana"));
-		System.out.println(dictionary.get("grape"));
-		System.out.println(dictionary.get("orange"));
+
+		if(dictionary.get(text) == null) {
+			System.out.println(text + "は辞書に存在しません。");
+		}else {
+		System.out.println(text + "の意味は" + dictionary.get(text) + "です");
+		}
+		// TODO 自動生成されたメソッド・スタブ
 		
 	}
 	
